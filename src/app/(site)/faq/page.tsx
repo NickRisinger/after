@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { FaqItem } from './ui/FaqItem';
+import { faqItems } from './data';
 
 export default function Home() {
   return (
     <main className="flex flex-col gap-y-3">
-      <FaqItem question="test" answer="test" />
-      <FaqItem question="test" answer="test" />
-      <FaqItem question="test" answer="test" />
+      {faqItems.map(({ question, answer }, index) => (
+        <FaqItem key={index} question={question} answer={answer} />
+      ))}
     </main>
   );
 }
