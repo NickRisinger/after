@@ -16,15 +16,24 @@ export function Footer() {
       <section className="bg-[#F2FAFF] py-6">
         <div className="container flex justify-between">
           <div className="flex flex-col gap-y-6">
-            <div className="flex items-center gap-x-[10px]">
+            <Link
+              href="tel:+7(4942)36-00-61"
+              className="flex items-center gap-x-[10px]"
+            >
               <PhoneIcon className="h-[18px] w-[18px]" />
               <span>+ 7 (4942) 36-00-61</span>
-            </div>
-            <div className="flex items-center gap-x-[10px]">
+            </Link>
+            <Link
+              target="_blank"
+              href="https://yandex.ru/maps/7/kostroma/?ll=40.959534%2C57.764092&mode=poi&poi%5Bpoint%5D=40.959603%2C57.764110&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D136915981039&z=20.2"
+              className="flex items-center gap-x-[10px]"
+            >
               <MapMarkerIcon className="h-[18px] w-[13px]" />
               <span>Кострома, ул. Никитская, д.35</span>
-            </div>
-            <span>E-mail: arbat-an44@yandex.ru</span>
+            </Link>
+            <Link href="mailto:arbat-an44@yandex.ru">
+              E-mail: arbat-an44@yandex.ru
+            </Link>
             <span>Мы в соцсетях:</span>
           </div>
 
