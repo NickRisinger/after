@@ -19,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body style={manrope.style}>
+      <body
+        className="text-base font-normal text-[#2F2F2F]"
+        style={manrope.style}
+      >
         {children}
         <Script
           src={`https://api-maps.yandex.ru/3.0/?apikey=${MAP_API_KEY}&lang=ru_RU`}
