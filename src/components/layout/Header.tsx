@@ -6,8 +6,8 @@ import HeartIcon from '~/assets/svgs/heart.svg';
 
 export function Header() {
   return (
-    <header className="container py-6">
-      <div className="flex items-center justify-between">
+    <header className="border-b border-[#DDDDDD] py-6">
+      <div className="container flex items-center justify-between">
         <div className="flex items-center gap-x-[70px]">
           <Link href="/">
             <LogoIcon className="h-[33px] w-[123px]" />
