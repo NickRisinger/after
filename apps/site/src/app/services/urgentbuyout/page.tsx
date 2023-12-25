@@ -12,8 +12,8 @@ export default function Page() {
           <div className="flex flex-col gap-y-[52px]">
             <h1 className="text-[44px] font-bold">Срочный выкуп</h1>
             <p className="max-w-[392px]">
-              Купим вашу квартиру за собственные средства компании. Бесплатная
-              оценка квартиры при выкупе и подготовка всех документов.
+              Купим вашу квартиру за собственные средства компании. Бесплатная
+              оценка квартиры при выкупе и подготовка всех документов.
             </p>
           </div>
           <button className="flex h-[46px] w-fit items-center rounded-[10px] bg-[#E2061A] px-4 font-semibold text-white">
@@ -43,13 +43,13 @@ export default function Page() {
 
           <ServiceCard
             title="Оценка имущества"
-            description="Наш специалист договаривается с Вами о встрече, выезжает на дом и оценивает недвижимость."
+            description="Наш специалист договаривается с Вами о встрече, выезжает на дом и оценивает недвижимость."
             imageUrl="urgentbuyout/grade-property.png"
           />
 
           <ServiceCard
             title="Условия сделки"
-            description="Мы бесплатно проверим Ваши документы, договоримся об условиях и цене."
+            description="Мы бесплатно проверим Ваши документы, договоримся об условиях и цене."
             imageUrl="urgentbuyout/terms-transaction.png"
           />
 

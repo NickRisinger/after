@@ -12,7 +12,7 @@ export default function Page() {
           <div className="flex flex-col gap-y-[52px]">
             <h1 className="text-[44px] font-bold">Защитите своё будущее</h1>
             <p className="max-w-[297px]">
-              Страхование имущества от пожара, затопления и других
+              Страхование имущества от пожара, затопления и других
               непредвиденных ситуаций.
             </p>
           </div>

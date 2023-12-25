@@ -1,4 +1,3 @@
-import { type ReactNode } from 'react';
 import { FaqItem } from './ui/FaqItem';
 import { faqItems } from './data';
 import BreadCrumbs from '~/components/BreadCrumbs';
@@ -13,11 +12,3 @@ export default function Home() {
     </main>
   );
 }
-
-function Header(children: ReactNode) {
-  return <h1 className="text-3xl font-bold text-[#2F2F2F]">{children}</h1>;
-}
-
-function FaqList() {}
-
-function Pagination() {}

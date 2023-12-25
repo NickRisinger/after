@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
-import './globals.css';
 import Script from 'next/script';
+import { Header, Footer } from '~/components/layout';
+
+import './globals.css';
 
 const manrope = Manrope({ subsets: ['latin'] });
 
@@ -23,7 +25,12 @@ export default function RootLayout({
         className="text-base font-normal text-[#2F2F2F]"
         style={manrope.style}
       >
+        <Header />
+        <section>nav</section>
         {children}
+        <Footer />
+
+        {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
         <Script
           src={`https://api-maps.yandex.ru/3.0/?apikey=${MAP_API_KEY}&lang=ru_RU`}
           type="module"
