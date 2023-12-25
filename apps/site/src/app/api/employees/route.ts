@@ -17,6 +17,10 @@ export async function POST(request: NextRequest) {
   const body = await request.json();
 
   const { data, headers } = await http.post('/realtors', {
+    filter: {
+      roles: ['roleRealtor', 'roleGroupLeader'],
+      not: { phone: null },
+    },
     ...body,
   });
 
