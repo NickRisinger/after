@@ -1,7 +1,8 @@
 import Review from './Review';
+import EmptyReviews from './EmptyReviews';
 
-export default function Reviews() {
-  return (
+export default function Reviews({ reviews }: { reviews: any[] }) {
+  return reviews.length > 0 ? (
     <div className="mt-12">
       <div className="flex items-center justify-between">
         <div className="">
@@ -12,9 +13,13 @@ export default function Reviews() {
         </button>
       </div>
       <div className="mt-12 flex flex-col gap-y-5">
-        <Review />
+        {reviews.map((review, index) => (
+          <Review key={'review-' + index} />
+        ))}
       </div>
       <div className="mt-12"></div>
     </div>
+  ) : (
+    <EmptyReviews />
   );
 }
