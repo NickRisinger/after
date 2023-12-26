@@ -38,7 +38,7 @@ export default function Filters() {
     },
   });
 
-  const { watch } = methods;
+  const { register, watch } = methods;
 
   const operationId = watch('operationId');
   const categoryId = watch('categoryId');
@@ -51,7 +51,17 @@ export default function Filters() {
         {(operationId == '1' || operationId == '2') && (
           <div className="flex flex-col gap-y-5">
             <div className="flex items-center gap-x-3">
-              <div className="grow bg-white py-4"></div>
+              <div className="grow bg-white py-4">
+                <select {...register('categoryId')}>
+                  <option value="1">Комнаты</option>
+                  <option value="2">Квартиры</option>
+                  <option value="3">Дома, дачи, коттеджи</option>
+                  <option value="4">Коммерческая</option>
+                  <option value="5">Земельные участки</option>
+                  <option value="6">Гаражи и машиноместа</option>
+                  <option value="7">Новостройки</option>
+                </select>
+              </div>
               <div className="grow bg-white py-4"></div>
               {categoryId !== '2' && <div className="grow bg-white py-4"></div>}
               <div className="grow bg-white py-4"></div>
