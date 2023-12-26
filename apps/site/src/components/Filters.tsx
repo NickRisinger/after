@@ -34,6 +34,7 @@ export default function Filters() {
   }>({
     defaultValues: {
       operationId: '1',
+      categoryId: '2',
     },
   });
 
