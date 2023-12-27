@@ -30,11 +30,17 @@ function Pressed() {
 export default function Filters() {
   const methods = useForm<{
     operationId: string;
-    categoryId: string;
+    categoryId: number;
+    roomsAmount: string;
+    priceFrom: number;
+    priceTo: number;
+    totalAreaFrom: number;
+    totalAreaTo: number;
+    address: string;
   }>({
     defaultValues: {
       operationId: '1',
-      categoryId: '2',
+      categoryId: 2,
     },
   });
 
@@ -51,8 +57,8 @@ export default function Filters() {
         {(operationId == '1' || operationId == '2') && (
           <div className="flex flex-col gap-y-5">
             <div className="flex items-center gap-x-3">
-              <div className="grow bg-white py-4">
-                <select {...register('categoryId')}>
+              <div className="grow bg-white">
+                <select {...register('categoryId', { valueAsNumber: true })}>
                   <option value="1">Комнаты</option>
                   <option value="2">Квартиры</option>
                   <option value="3">Дома, дачи, коттеджи</option>
@@ -62,10 +68,49 @@ export default function Filters() {
                   <option value="7">Новостройки</option>
                 </select>
               </div>
-              <div className="grow bg-white py-4"></div>
-              {categoryId !== '2' && <div className="grow bg-white py-4"></div>}
-              <div className="grow bg-white py-4"></div>
-              <div className="grow bg-white py-4"></div>
+              {[1, 2, 3, 7].includes(categoryId) && (
+                <div className="grow bg-white">
+                  <select {...register('roomsAmount')}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                    <option value="Студия">Студия</option>
+                  </select>
+                </div>
+              )}
+              <div className="grow bg-white">
+                <input
+                  type="number"
+                  placeholder="Цена от"
+                  {...register('priceFrom', { valueAsNumber: true })}
+                />
+                <input
+                  type="number"
+                  placeholder="Цена до"
+                  {...register('priceTo', { valueAsNumber: true })}
+                />
+              </div>
+              <div className="grow bg-white">
+                <input
+                  type="number"
+                  placeholder="Площадь от"
+                  {...register('totalAreaFrom', { valueAsNumber: true })}
+                />
+                <input
+                  type="number"
+                  placeholder="Площадь до"
+                  {...register('totalAreaTo', { valueAsNumber: true })}
+                />
+              </div>
+              <div className="grow bg-white">
+                <input
+                  type="number"
+                  placeholder="Адрес"
+                  {...register('address', { valueAsNumber: true })}
+                />
+              </div>
               <div className="bg-white px-10 py-4"></div>
             </div>
             <div className="">

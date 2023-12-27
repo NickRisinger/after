@@ -9,6 +9,8 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@mantine/hooks": "^7.3.2",
+    "@mantine/modals": "^7.3.2",
     "@prisma/client": "5.7.1",
     "@radix-ui/react-collapsible": "^1.0.3",
     "axios": "^1.6.2",
