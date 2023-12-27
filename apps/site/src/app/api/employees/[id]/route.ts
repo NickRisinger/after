@@ -7,5 +7,5 @@ export async function GET(
 ) {
   const { data } = await http.get('/realtor/' + params.id);
 
-  return Response.json({ params });
+  return Response.json({ data });
 }

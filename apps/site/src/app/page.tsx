@@ -1,7 +1,9 @@
+import Filters from '~/components/Filters';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Index Page
+    <main className="bg-slate-600">
+      <Filters />
     </main>
   );
 }
