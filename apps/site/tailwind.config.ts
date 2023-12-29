@@ -17,6 +17,19 @@ const config: Config = {
         xl: '0px',
       },
     },
+    keyframes: {
+      slide: {
+        from: {
+          transform: 'translateY(100%)',
+        },
+        to: {
+          transform: 'translateY(0)',
+        },
+      },
+    },
+    animation: {
+      'filter-slide': 'slide .5s ease-in-out',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

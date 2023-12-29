@@ -1,6 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { FormProvider, useForm, useFormContext } from 'react-hook-form';
+import PropertyType from './filters/PropertyType';
 
 function Pressed() {
   const { register } = useFormContext();
@@ -31,7 +32,7 @@ export default function Filters() {
   const methods = useForm<{
     operationId: string;
     categoryId: number;
-    roomsAmount: string;
+    roomsAmount: string[];
     priceFrom: number;
     priceTo: number;
     totalAreaFrom: number;
@@ -57,8 +58,8 @@ export default function Filters() {
         {(operationId == '1' || operationId == '2') && (
           <div className="flex flex-col gap-y-5">
             <div className="flex items-center gap-x-3">
-              <div className="grow bg-white">
-                <select {...register('categoryId', { valueAsNumber: true })}>
+              <div className="min-w-[231px] grow">
+                {/* <select {...register('categoryId', { valueAsNumber: true })}>
                   <option value="1">Комнаты</option>
                   <option value="2">Квартиры</option>
                   <option value="3">Дома, дачи, коттеджи</option>
@@ -66,7 +67,8 @@ export default function Filters() {
                   <option value="5">Земельные участки</option>
                   <option value="6">Гаражи и машиноместа</option>
                   <option value="7">Новостройки</option>
-                </select>
+                </select> */}
+                <PropertyType />
               </div>
               {[1, 2, 3, 7].includes(categoryId) && (
                 <div className="grow bg-white">
